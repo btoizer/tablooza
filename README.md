@@ -1,2 +1,2 @@
 # tablooza0
-Build pretty tables.
+Automate formatting pretty tables.
