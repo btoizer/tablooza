@@ -1,0 +1,26 @@
+Package: tablooza
+Title: Build Pretty Tables
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Barbara",
+           family = "Toizer",
+           role = c("aut", "cre"),
+           email = "btoizer@gmail.com",
+           comment = c(ORCID = "0000-0002-6717-3358"))
+Description: Build tables that can be rendered to Word with minimal formatting outside of RStudio.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+        tidyverse
+Suggests:
+        car,
+        dplyr,
+        Hmisc,
+        psych,
+        methods,
+        stats,
+        QuantPsyc,
+        tidyselect
