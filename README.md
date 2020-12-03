@@ -1,2 +1,2 @@
-# tablooza0
+# tablooza
 Automate formatting pretty tables.
