@@ -24,7 +24,7 @@ reg_tab <- function(mod, preds_vec, betas = c("unstd", "std"), se = T){
     }
 
     # save starred values into vector
-    unstd_beta_vals <- vec_out[2:length(vec_out)]
+    unstd_beta_vals <- vec_out
 
     # add to table
     reg_tab[, (length(reg_tab)+1)] <- unstd_beta_vals
@@ -44,7 +44,7 @@ reg_tab <- function(mod, preds_vec, betas = c("unstd", "std"), se = T){
     for(i in c(2:nrow(tab))){
       vec_out[i] <- signif_stars(std.beta_vec[i], tab[i,4])
     }
-    std_beta_vals <- vec_out[2:length(vec_out)]
+    std_beta_vals <- vec_out
 
     # add to table
     reg_tab[, (length(reg_tab)+1)] <- std_beta_vals
