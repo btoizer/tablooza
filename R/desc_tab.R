@@ -8,7 +8,7 @@
 #' @return Formatted descriptive statistics table
 #' @export
 
-desc_tab <- function(dat, dvs, ivs = NULL, na.rm = F, pretty_rownames = NULL, reliability = F){
+desc_tab <- function(dat, dvs, ivs = NULL, na.rm = F, pretty_rownames = NULL, reliability = F, sep = ""){
 
   # Define function to format individual mean/sd combinations
   format_mean_sd <- function(x, na.rm = F){
@@ -62,7 +62,7 @@ desc_tab <- function(dat, dvs, ivs = NULL, na.rm = F, pretty_rownames = NULL, re
     # Use psych package to calculate alphas
     alpha_vec <- c()
     for(stem in dvs){
-      stem <- paste0(stem, "_") # Variables must be formatted as stem_ to work
+      stem <- paste0(stem, sep) # Variables must be formatted as stem_ to work
       scale_vars <- dat %>% dplyr::select(tidyselect::starts_with(stem))
       full_reliability <- psych::alpha(scale_vars)
       cur_alpha <- full_reliability$total$raw_alpha # Save only unstandardized alpha estimate

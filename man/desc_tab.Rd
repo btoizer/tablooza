@@ -10,7 +10,8 @@ desc_tab(
   ivs = NULL,
   na.rm = F,
   pretty_rownames = NULL,
-  reliability = F
+  reliability = F,
+  sep = ""
 )
 }
 \arguments{
@@ -25,6 +26,9 @@ desc_tab(
 \item{pretty_rownames}{An optional vector with formatted dependent variable names.}
 
 \item{reliability}{Logical, indicates whether or not to conduct reliability analyses (i.e. Cronbach's alpha) for each dependent variable, using {psych} package. To include reliability analyses, the columns that make up each dependent variable must be named the same as the dependent variable, followed by an underscore. Defaults to FALSE}
+}
+
+\item{sep}{Denotes the character separating variable stems and item numbers in the data frame, in order to select the relevant variables to calculate Cronbach's alpha. Only used when reliability = T}
 }
 \value{
 Formatted descriptive statistics table
