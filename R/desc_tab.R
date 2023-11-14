@@ -63,7 +63,7 @@ desc_tab <- function(dat, dvs, ivs = NULL, na.rm = F, pretty_rownames = NULL, re
     alpha_vec <- c()
     for(stem in dvs){
       stem <- paste0(stem, sep) # Variables must be formatted as stem_ to work
-      scale_vars <- dat %>% dplyr::select(c_across(starts_with(stem)))
+      scale_vars <- dat %>% dplyr::select(tidyselect::starts_with(stem))
       full_reliability <- psych::alpha(scale_vars)
       cur_alpha <- full_reliability$total$raw_alpha # Save only unstandardized alpha estimate
       alpha_vec <- c(alpha_vec, cur_alpha)
